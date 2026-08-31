@@ -1,0 +1,63 @@
+@font-face{
+    font-family: 'poppins';
+    src:url(../font/Poppins-Medium.ttf)
+    format(web open font format);
+}
+*{
+    text-transform: capitalize;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'poppins';
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1976D2;
+    color: #fff;
+    font-size: 20px;
+    line-height: 60px;
+    margin: 200px auto 0 auto;
+    transition: background-color 0.1s 0s ease-in;
+    cursor: pointer;
+}
+.icon{
+    width: 30px;
+    margin-left: 5px;
+    transition: transform 0.2s 0s ease-in;
+}
+.btn:hover{
+    background-color: #1565C0;
+}
+.btn:hover .icon{
+    transform: rotate(180deg);
+}
+.container-box{
+    visibility: hidden;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(220, 220, 220);
+    margin: 0 auto;
+    transition: all 0.2s 0.1s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+.box{
+    font-size: 20px;
+    text-align: center;
+    padding:9px;
+    display: block;
+}
+.box:hover{
+    background-color: #eeeeee;
+}
+.btn:hover~.container-box,.container-box:hover{
+    opacity: 1;
+    transform: translateY(10px);
+    visibility: visible;
+}

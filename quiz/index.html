@@ -1,0 +1,72 @@
+<!-- result: great, good, bad -->
+
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبزلرن - بازی پرسشنامه</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+  </head>
+  <body onload="loadingQuestions()">
+    <section class="container">
+      <h1 class="question"></h1>
+      <div>
+        <p class="quest-index">
+          پرسش <span class="current"></span> از
+          <span class="total"></span>
+          پرسش
+        </p>
+      </div>
+
+      <div class="questions">
+        <article class="quest">
+          <input type="radio" name="questbox" id="quest-1" class="radio-btn" />
+          <label for="quest-1" class="answer-title"></label>
+        </article>
+        <article class="quest">
+          <input type="radio" name="questbox" id="quest-2" class="radio-btn" />
+          <label for="quest-2" class="answer-title"></label>
+        </article>
+        <article class="quest">
+          <input type="radio" name="questbox" id="quest-3" class="radio-btn" />
+          <label for="quest-3" class="answer-title"></label>
+        </article>
+      </div>
+
+      <div class="buttons">
+        <button class="result-button">نتیجه</button>
+        <button class="next">بعدی</button>
+      </div>
+    </section>
+
+    <div class="modal-screen hidden">
+      <article class="modal">
+        <header>
+          <span>نتیجه پرسش نامه</span>
+          <button class="x">X</button>
+        </header>
+        <main>
+          <div class="result-card">
+            <p>نتیجه:</p>
+            <p class="result"></p>
+          </div>
+          <p class="final-result">
+            شما تونستید <span class="answered-questions">0</span> پاسخ صحیح از
+            <span class="total-questions"></span> سوال بدید.
+          </p>
+        </main>
+        <footer class="modal-footer">
+          <button class="close">انصراف</button>
+          <button class="continue">تلاش مجدد</button>
+        </footer>
+      </article>
+    </div>
+    <footer class="copyright">
+      &copy; طراحی شده با 💚 در
+      <a href="https://sabzlearn.ir" target="_blank">سبزلرن</a>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

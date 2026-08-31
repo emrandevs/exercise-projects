@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+* {
+  @apply p-0 m-0;
+}
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(../fonts/Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Medium";
+  src: url(../fonts/Sans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Sans-DemiBold";
+  src: url(../fonts/Sans-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(../fonts/Sans-Bold.ttf);
+}
+
+body {
+  @apply min-h-screen w-full font-Sans-Regular bg-zinc-900 text-white;
+}
+
+.client-header {
+  @apply child:flex child:items-center child:gap-4 flex items-center border-b border-white/10 justify-between px-10 py-6;
+}
+
+.website-logo {
+  @apply w-28;
+}
+
+a:hover {
+  @apply text-red-700 duration-150;
+}
+
+.left-items {
+  @apply divide-white/10;
+}
+
+.br {
+  @apply w-px h-6 bg-white/10;
+}
+
+.basket-wrapper {
+  @apply flex items-center justify-center relative;
+}
+
+.open-basket {
+  @apply p-2 rounded relative z-10 hover:bg-red-700/10 hover:text-red-700 duration-150;
+}
+
+.count {
+  @apply absolute z-10 -top-2 duration-150 select-none -right-2 pt-0.5 text-sm rounded-full size-[21px] flex items-center justify-center bg-rose-700;
+}
+
+.hidden {
+  @apply opacity-0 invisible;
+}
+
+.basket-screen.hidden + .basket {
+  @apply opacity-0 invisible;
+}
+
+.wrapper {
+  @apply container mx-auto grid grid-cols-4 child:w-full  gap-3 my-10 child:duration-150   child:border child:rounded child:shadow-2xl child:overflow-hidden child:border-white/10;
+}
+
+.product-header {
+  @apply h-[240px] p-4 w-full child:object-cover overflow-hidden;
+}
+
+.product-body {
+  @apply p-4 mt-3;
+}
+
+.product-title {
+  @apply line-clamp-2;
+}
+
+.product-footer {
+  @apply flex items-center justify-between p-3;
+}
+
+.price {
+  @apply text-lg font-Sans-DemiBold text-red-600;
+}
+.see-more-section {
+  @apply container mx-auto mt-10 flex items-center justify-between;
+}
+
+.see-more {
+  @apply flex items-center justify-center gap-1 px-4 py-1.5 rounded duration-150 hover:bg-red-600/10 hover:text-red-600;
+}
+
+.desc {
+  @apply text-sm line-clamp-2 text-zinc-400 mt-2;
+}
+
+.banner-1 {
+  @apply container mx-auto rounded-2xl overflow-hidden;
+}
+
+.footer {
+  @apply bg-zinc-800 container mx-auto rounded-2xl mb-4;
+}
+
+.footer-container {
+  @apply w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between;
+}
+
+.copyright {
+  @apply text-sm text-gray-500 sm:text-center dark:text-gray-400;
+
+  a {
+    @apply hover:underline;
+  }
+}
+
+.footer-links {
+  @apply flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0;
+
+  a {
+    @apply hover:underline me-4 md:me-6;
+  }
+}
+
+.basket-screen {
+  @apply w-full h-screen fixed top-0 backdrop-blur-sm right-0;
+}
+
+.basket {
+  @apply absolute w-[480px] top-full left-0 rounded p-4 z-10  bg-zinc-800 divide-y  divide-white/5;
+}
+
+.basket-header {
+  @apply w-full items-center justify-between flex pb-2;
+}
+
+.close-basket {
+  @apply size-8 flex items-center justify-center rounded-full bg-red-600/5 text-red-600 hover:bg-red-600/15 duration-150 focus:ring-4 ring-red-700/40;
+}
+
+.products-count {
+  @apply text-sm text-zinc-400;
+}
+
+.basket-main {
+  @apply py-5;
+}
+
+.basket-footer {
+  @apply pt-2 text-sm flex items-center justify-between;
+
+  p {
+    @apply text-sm text-zinc-200 font-Sans-DemiBold;
+  }
+}
+
+.complete-button {
+  @apply px-3 py-1.5 rounded bg-emerald-600 duration-150 shadow-inner hover:bg-opacity-90 focus-within:ring-4 ring-emerald-800/70;
+}
+
+.empty-basket {
+  @apply text-sm text-center bg-red-600/10 py-3 text-red-500 rounded border border-red-700/40;
+}
+
+.clear-button {
+  @apply px-3 py-1.5 rounded flex items-center gap-1 bg-red-600 duration-150 shadow-inner hover:bg-opacity-90 focus-within:ring-4 ring-red-800/70;
+}
+
+.basket-buttons {
+  @apply flex items-center gap-2 child:px-4 child:h-[32px] text-xs;
+}
+
+.basket-item {
+  @apply flex items-center relative gap-2 rounded duration-150 hover:bg-zinc-700/20 px-2 cursor-pointer py-4;
+
+  img {
+    @apply w-16;
+  }
+
+  .basket-item_details {
+    @apply space-y-1;
+  }
+
+  .basket-item_title {
+    @apply text-sm line-clamp-2 w-full;
+  }
+
+  .basket-item_price {
+    @apply text-sm text-red-500;
+  }
+}
+
+.flex-center {
+  @apply flex items-center gap-2;
+}
+
+.remove-button {
+  @apply bg-red-600 px-3 py-1.5 rounded  duration-150 hover:bg-opacity-90 focus-within:ring-2 ring-red-500/40;
+}
+
+.buttons {
+  @apply flex items-center text-sm gap-1.5 child:px-3 child:py-1.5  child:flex child:items-center child:justify-center child:rounded child:duration-150 child-hover:bg-opacity-90;
+
+  button {
+    @apply focus-within:ring-4;
+  }
+}
+
+.decrease {
+  @apply bg-yellow-500 ring-yellow-500/40;
+}
+
+.increase {
+  @apply bg-green-500 ring-green-500/40;
+}
+
+.product-count-card {
+  @apply flex items-center text-sm justify-center mt-3 gap-1;
+}
+
+.add-to-cart {
+  @apply flex items-center gap-1 px-3 py-1.5 rounded bg-red-600 duration-150 hover:bg-opacity-90 focus-within:ring-4 ring-red-500/40;
+}

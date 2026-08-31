@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(../fonts/Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Medium";
+  src: url(../fonts/Sans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Sans-DemiBold";
+  src: url(../fonts/Sans-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(../fonts/Sans-Bold.ttf);
+}
+
+body {
+  @apply font-Sans-Regular flex items-center justify-center w-full h-screen flex-col gap-4 bg-gradient-to-t from-emerald-400 to-emerald-600;
+}
+
+.game-card {
+  @apply min-w-[368px] p-4 bg-white rounded;
+
+  header {
+    @apply pb-3;
+  }
+
+  main {
+    @apply border-y py-3;
+  }
+
+  footer {
+    @apply pt-3 space-y-2;
+
+    button {
+      @apply flex items-center justify-center w-full h-10 gap-2 text-sm rounded text-white font-Sans-DemiBold cursor-pointer duration-150  focus-within:ring-4;
+    }
+  }
+}
+
+.hint {
+  @apply space-y-2 text-sm;
+}
+
+.hint-word {
+  @apply text-blue-500 font-Sans-DemiBold;
+}
+.score {
+  @apply text-sm mt-2;
+}
+
+.inputs {
+  @apply flex items-center gap-2 justify-center w-full child:size-10 child:uppercase child:text-center text-sm mb-5 child:rounded child:border child:border-gray-300 child:outline-none;
+
+  .letter {
+    @apply duration-150 focus-within:ring-2 ring-emerald-500/80;
+  }
+}
+
+.continue {
+  @apply bg-emerald-500 ring-emerald-500/40;
+}
+
+.reset {
+  @apply bg-sky-500 ring-sky-500/40;
+}
+
+.warning {
+  @apply text-sm flex items-center justify-center gap-2 bg-yellow-500/5 border border-yellow-500/40 select-none duration-150 hover:bg-yellow-500/10 text-yellow-500 rounded py-2 mt-2 font-Sans-Medium;
+}
+
+.toast {
+  @apply fixed top-4 text-white overflow-hidden duration-300 transition-all left-4 w-[280px] bg-zinc-800 h-16  rounded-md p-3 flex items-center;
+}
+
+.toast-icon {
+  @apply text-2xl size-10 flex items-center justify-center rounded;
+}
+
+.toast-content {
+  @apply flex items-center gap-3;
+
+  p {
+    @apply text-sm;
+  }
+}
+
+.toast.success {
+  .toast-icon {
+    @apply bg-emerald-500/10 text-emerald-500;
+  }
+  /* process bg color  */
+  .process-bar {
+    @apply bg-emerald-500/10;
+  }
+  .process {
+    @apply bg-emerald-500;
+  }
+}
+
+.toast.error {
+  .toast-icon {
+    @apply bg-red-500/10 text-red-500;
+  }
+
+  .process-bar {
+    @apply bg-red-500/10;
+  }
+
+  .process {
+    @apply bg-red-500;
+  }
+}
+
+.process-bar {
+  @apply bg-zinc-300 h-1.5  absolute bottom-0 transition-all duration-300  right-0 w-full overflow-hidden;
+}
+
+.process {
+  @apply h-full absolute right-0 top-0 bg-emerald-500;
+}
+
+.toast.hidden {
+  @apply -translate-x-80;
+}
+
+.continue.disabled {
+  @apply cursor-not-allowed bg-emerald-500/60;
+}
+
+.modal-screen {
+  @apply w-full h-screen top-0 right-0 fixed backdrop-blur-sm bg-black/50 flex items-center justify-center;
+}
+
+.modal-card {
+  @apply w-[440px] relative bg-white p-4 rounded-lg duration-150;
+}
+
+.modal-card.success {
+  .modal-icon {
+    @apply bg-emerald-500/10 text-emerald-500;
+
+    i::before {
+      content: "\f058";
+    }
+  }
+}
+
+.modal-card.error {
+
+  .modal-icon {
+    @apply bg-red-500/10 text-red-500;
+
+    i::before {
+      content: "\f057";
+    }
+  }
+  
+}
+i {
+  @apply relative;
+}
+i::before {
+  /* Fontawesome font family */
+  font-family: "FontAwesome";
+  font-style: normal;
+  /* Success icon */
+}
+
+.modal-icon {
+  @apply mx-auto size-12 flex items-center justify-center rounded-md text-3xl;
+}
+
+.modal-body {
+  @apply w-full text-center my-6 font-Sans-Medium text-zinc-600;
+}
+
+.modal-footer {
+  @apply flex text-sm child:px-4 child:py-1.5 child:rounded-md items-center justify-center gap-2;
+}
+
+#cancel {
+  @apply bg-amber-500/10 text-amber-500 hover:bg-amber-500/20;
+}
+
+#try-again {
+  @apply bg-blue-600 text-white hover:bg-opacity-80;
+}
+
+.modal-screen.hidden {
+  @apply opacity-0 invisible;
+}

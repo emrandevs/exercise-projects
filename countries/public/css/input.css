@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(../fonts/Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Medium";
+  src: url(../fonts/Sans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Sans-DemiBold";
+  src: url(../fonts/Sans-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(../fonts/Sans-Bold.ttf);
+}
+
+body {
+  @apply font-Sans-Regular bg-zinc-200;
+}
+
+.dark {
+  @apply bg-zinc-900 text-white;
+}
+
+header {
+  @apply flex items-center justify-between bg-white px-10 py-6 dark:bg-zinc-800;
+}
+
+#theme-button {
+  @apply size-12 rounded-full flex items-center bg-zinc-200 text-zinc-500 justify-center dark:bg-zinc-700 text-2xl duration-150 dark:shadow-inner dark:shadow-zinc-500/40 hover:dark:bg-zinc-600 focus-within:ring-4 dark:ring-zinc-500/40;
+}
+
+h1 {
+  @apply text-2xl font-Sans-Bold text-emerald-600;
+}
+
+.content {
+  @apply mt-20;
+}
+
+.header {
+  @apply w-full flex items-center justify-between;
+}
+
+.search {
+  @apply w-[300px] h-10 relative child:w-full child:h-full child:outline-none child:bg-transparent bg-zinc-50 rounded-lg overflow-hidden text-zinc-700 dark:text-zinc-200 dark:bg-zinc-800 child:placeholder:text-sm;
+  input {
+    @apply px-6;
+  }
+}
+
+.search .icon {
+  @apply absolute left-4 max-w-max top-0 h-full flex items-center justify-center dark:text-zinc-400;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.countries {
+  @apply left-0 w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 rounded-lg;
+}
+
+body main {
+  @apply mt-10 mb-40 space-y-10;
+}
+.country {
+  @apply flex flex-col bg-white gap-2 p-4 dark:bg-zinc-800 rounded-lg;
+
+  img {
+    @apply w-full h-[160px] rounded-lg;
+  }
+
+  .country-name {
+    @apply font-Sans-Bold;
+  }
+}
+
+.search-by {
+  @apply relative w-[140px] bg-white dark:bg-zinc-800 p-2 px-4 flex items-center cursor-pointer duration-150 hover:dark:bg-opacity-90 justify-between rounded-lg focus-within:ring-4 dark:ring-zinc-500/40;
+}
+
+.search-by::before {
+  content: "\2190";
+  @apply absolute left-3 dark:text-zinc-400 max-w-max max-h-max  rounded-lg;
+}
+
+.dropdown {
+  @apply absolute whitespace-nowrap  overflow-hidden  w-[240px] dark:bg-zinc-800 p-3 rounded-lg focus-within:ring-4 dark:ring-zinc-500/40;
+}
+
+.dropdown-item {
+  @apply flex flex-col gap-3 p-2 dark:bg-zinc-800 rounded-lg duration-150 px-4 dark:hover:bg-zinc-700 cursor-pointer hover:dark:bg-opacity-40 select-none w-full;
+}
+
+.dropdown.hidden {
+  @apply opacity-0 invisible;
+}
+
+.country-details {
+  @apply my-1;
+
+  .title {
+    @apply font-Sans-DemiBold;
+  }
+
+  .data {
+    @apply font-Sans-Regular text-sm dark:text-zinc-200;
+  }
+}
+.open-map {
+  @apply w-full h-10 flex items-center justify-center bg-emerald-500 rounded focus-within:ring-4 ring-emerald-400/50 text-white font-Sans-Regular cursor-pointer duration-150 hover:bg-emerald-600 gap-1;
+}
+
+.copyright {
+  @apply w-full absolute py-4 flex items-center justify-center gap-2 text-zinc-900 text-sm bg-white;
+}

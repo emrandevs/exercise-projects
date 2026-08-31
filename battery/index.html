@@ -1,0 +1,52 @@
+<!-- 
+   add this className to .battery__liquid
+   %20 > : gradient-color-red 
+   %40 > : gradient-color-orange
+   %80 > : gradient-color-yellow
+   %100> : gradient-color-green
+
+
+    Battery charging status 
+    Set innerHTML to this element: battery__status
+    ⚡if charging: Charging... <i class="ri-flashlight-line animated-green"></i>
+    🔋if Battery is full: Full battery <i class="ri-battery-2-fill green-color"></i>
+    🪫if Battery is low: Low battery <i class="ri-plug-line animated-red"></i>
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Battery</title>
+  </head>
+  <body onload="gettingBattery()">
+    <section class="battery">
+      <div class="battery__card">
+        <div class="battery__data">
+          <p class="battery__text">Battery</p>
+          <h1 class="battery__percentage">0%</h1>
+
+          <p class="battery__status">
+
+          </p>
+        </div>
+
+        <div class="battery__pill">
+          <div class="battery__level">
+            <div class="battery__liquid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

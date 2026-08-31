@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بازی حدس کلمه</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <!-- Fontawesome 6.0.0 -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body onload="showContent()">
+    <div class="game-card">
+      <header>
+        <p class="game-card-title">بازی حدس کلمه</p>
+      </header>
+      <main>
+
+        <div class="inputs" dir="ltr">
+          <!--inputs-->
+        </div>
+
+        <div class="hint">
+          <p class="hint-text">
+            راهنمایی:
+            <span class="hint-word"></span>
+          </p>
+          <p class="hint-text">
+            کلمه وارد شده: <span class="hint-word user-writted"></span>
+          </p>
+          <p class="hint-text">
+            تعداد حدس باقی مانده: <span class="hint-word guess-count">3</span>
+          </p>
+        </div>
+        <div class="hint-text">
+          <p class="hint-text">
+            امتیاز: <span class="hint-word score">0</span>
+          </p>
+        </div>
+        <div class="warning">
+          <i class="fas fa-exclamation-circle"></i>
+          <span> جواب هارا به زبان انگلیسی وارد کنید </span>
+        </div>
+      </main>
+      <footer>
+        <button class="continue">
+          ادامه
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Reset button -->
+        <button class="reset">
+          <i class="fas fa-sync-alt"></i>
+          تلاش مجدد
+        </button>
+      </footer>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

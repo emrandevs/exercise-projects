@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(../fonts/Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Medium";
+  src: url(../fonts/Sans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Sans-DemiBold";
+  src: url(../fonts/Sans-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(../fonts/Sans-Bold.ttf);
+}
+
+body {
+  @apply bg-zinc-100 font-Sans-Regular;
+}
+
+.input-element {
+  @apply w-[300px] rounded-md border px-4 focus-within:ring-2 ring-zinc-600/60 ring-offset-2 outline-none h-10 text-sm;
+}
+
+.checkbox {
+  @apply w-11 cursor-pointer group-checked:bg-black p-px h-6 duration-150 relative flex items-center px-[3px] rounded-3xl bg-zinc-200 shadow-inner;
+}
+
+[type="checkbox"] {
+  @apply absolute w-full h-full right-0 top-0 opacity-0 cursor-pointer select-none;
+}
+
+.circle {
+  @apply w-5 h-[90%] rounded-full duration-150 bg-white;
+}
+
+.checkbox.checked {
+  @apply bg-zinc-800;
+
+  .circle {
+    @apply -translate-x-[18px];
+  }
+}
+
+.price-range {
+  @apply text-lg font-Sans-Bold px-0.5 text-black;
+}
+
+.jobs-container {
+  @apply mt-10 grid grid-cols-3 gap-5;
+}
+
+.job-card {
+  @apply bg-white rounded-md border p-6;
+}
+
+footer {
+  @apply flex items-center gap-2 child:text-xs child:max-w-max child:px-2 child:py-1 child:rounded-2xl child:bg-zinc-700/10 child:text-zinc-700 child:font-Sans-Regular;
+}
+
+.job-title {
+  @apply font-Sans-Bold text-xl;
+}
+
+.job-company {
+  @apply text-sm mt-1 tracking-tight text-zinc-500;
+}
+
+.job-content {
+  @apply my-6 text-sm child:flex child:items-center child:gap-3 space-y-2 text-slate-600;
+}

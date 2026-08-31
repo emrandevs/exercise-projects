@@ -1,0 +1,61 @@
+<!-- 
+    dropdown .hidden
+-->
+
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabzlearn - Rest Countries</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="">
+    <header>
+      <div>
+        <button id="theme-button">
+          <i class="fa-solid "></i>
+        </button>
+      </div>
+    </header>
+    <main class="container content">
+      <div class="header">
+        <div>
+          <div class="search-by" tabindex="1">بر اساس</div>
+          <div class="dropdown hidden">
+            <div class="dropdown-content">
+              <div class="dropdown-item" data-c="europe">اروپا</div>
+              <div class="dropdown-item" data-c="africa">آفریقا</div>
+              <div class="dropdown-item" data-c="america">آمریکا</div>
+              <div class="dropdown-item" data-c="australia">اقیانوسیه</div>
+              <div class="dropdown-item" data-c="asia">آسیا</div>
+            </div>
+          </div>
+          <div class="search-container">
+            <div class="search-icon icon"></div>
+          </div>
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            autocomplete="off"
+            class="search-input"
+            placeholder="جستجوی کشور"
+          />
+          <button class="search-btn icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="countries">
+        <!--loading from JS-->
+      </div>
+    </main>
+
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>

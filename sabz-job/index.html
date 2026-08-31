@@ -1,0 +1,116 @@
+<!-- .checkbox haro ba class .checked toggle konid -->
+
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبزجاب</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body onload="loadingPage()">
+    <header
+      class="w-full flex items-center justify-between px-10 py-6 text-sm bg-white shadow-md"
+    >
+      <div
+        class="flex child:px-3 child:py-1.5 child:rounded-md child:duration-300 child-hover:bg-zinc-500/10 items-center gap-3"
+      >
+        <a href="#"> فرصت های شغلی </a>
+        <a href="#">مشاغل پیشنهادی</a>
+        <a href="#">شرکت ها</a>
+      </div>
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <span class="text-2xl text-zinc-500">
+            <i class="fas fa-briefcase"></i>
+          </span>
+          <span class="text-xl font-Sans-Bold"> سبزجاب </span>
+        </a>
+      </div>
+    </header>
+    <main class="my-20 container mx-auto">
+      <h1 class="font-Sans-Bold text-2xl">شغل رویایی خود را پیدا کنید</h1>
+      <div>
+        <div class="mt-5 flex items-center gap-3">
+          <input
+            type="text"
+            class="input-element"
+            placeholder="چه شغلی؟"
+            autocomplete="tel-local-suffix"
+            id="work-input"
+          />
+          <input
+            type="text"
+            class="input-element"
+            placeholder="از چه شهری؟"
+            id="city-input"
+            autocomplete="tel-local-suffix"
+          />
+          <div class="flex items-center mr-5 gap-4">
+            <div class="flex items-center gap-2">
+              <div class="checkbox has-[:checked]:bg-zinc-950">
+                <label class="peer">
+                  <input type="checkbox" id="remoteOnly-checkbox" />
+                </label>
+                <div
+                  class="peer-has-[:checked]:-translate-x-[17px] duration-150 circle"
+                ></div>
+              </div>
+              <span class="text-sm text-zinc-600"> فقط ریموت </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="checkbox has-[:checked]:bg-zinc-950">
+                <label class="peer">
+                  <input type="checkbox" id="fullTime-checkbox" />
+                </label>
+                <div
+                  class="peer-has-[:checked]:-translate-x-[17px] duration-150 circle"
+                ></div>
+              </div>
+              <span class="text-sm text-zinc-600">تمام وقت </span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-3">
+          <div>
+            <p class="text-sm text-zinc-700 font-Sans-Medium">
+              محدوده حقوق تا: <span class="price-range">...</span>تومان
+            </p>
+            <input
+              type="range"
+              class="accent-black h-1.5 w-[300px] border-none"
+              id="price-range-input"
+              step="1000000"
+              value="50000000"
+              min="10000000"
+              max="80000000"
+            />
+          </div>
+          <button
+            id="search-btn"
+            class="flex duration-150 focus-within:ring-4 ring-zinc-700/50 items-center gap-2 bg-gradient-to-t from-zinc-950 to-zinc-700 h-10 text-white px-4 rounded-md text-sm"
+          >
+            <!-- Search icon -->
+            <i class="fas fa-search"></i>
+            <span> جستجوی شغل </span>
+          </button>
+        </div>
+      </div>
+
+      <section class="mt-20">
+        <h2 class="font-Sans-Bold text-2xl">لیست شغل ها</h2>
+
+        <section class="jobs-container">
+          <!--load by js-->
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
