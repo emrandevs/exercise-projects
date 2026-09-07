@@ -1,17 +1,26 @@
 import Hero from "./components/Hero/Hero"
 import Menu from "./components/Menu/Menu"
 import Footer from "./components/Footer/Footer"
+import { useState } from "react"
 
 function App() {
-  const menuItems = [
-    {name:"espresso",price:"2"},
-    {name:"latte",price:"4"},
-    {name:"ice cream",price:"1"},
-    {name:"milk",price:"1"},
-    {name:"americano",price:"3"},
-    {name:"afogato",price:"3"},
-    {name:"flat white",price:"4"}
-  ];
+  let [menuItems , setMenuItems] = useState(
+    [
+      {id:0,name:"espresso",price:"2" ,exist:true},
+      {id:1,name:"latte",price:"4" ,exist:false},
+      {id:2,name:"ice cream",price:"1" ,exist:true},
+      {id:3,name:"milk",price:"1" ,exist:false},
+      {id:4,name:"americano",price:"3" ,exist:true},
+      {id:5,name:"afogato",price:"3" ,exist:false},
+      {id:6,name:"flat white",price:"4" ,exist:true}
+    ]
+  )
+
+
+  function deleteItem(id){
+    let selectedItem = menuItems.findIndex(item => item.id === id)
+    setMenuItems(menuItems.filter(item => item.id !== selectedItem))
+  }
   return (
     <>
       <Hero/>
@@ -19,13 +28,9 @@ function App() {
         <div className="menu-line"></div>
         <h2 className="menu-head">Menu</h2>
         <div className="menu-items">
-          <Menu {...menuItems[0]}/>
-          <Menu {...menuItems[1]}/>
-          <Menu {...menuItems[2]}/>
-          <Menu {...menuItems[3]}/>
-          <Menu {...menuItems[4]}/>
-          <Menu {...menuItems[5]}/>
-          <Menu {...menuItems[6]}/>
+          {
+            menuItems.map((item) => <Menu key={item.id} onRemove = {deleteItem} {...item}/>)
+          }
         </div>
       </div>
       <Footer/>
