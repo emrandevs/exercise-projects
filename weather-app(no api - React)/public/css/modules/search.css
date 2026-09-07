@@ -1,0 +1,47 @@
+#search-input {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-inline: calc(var(--spacing) * 4);
+    text-align: center !important;
+    font-family: var(--font-Vazir-Medium) !important;
+    font-size: var(--text-sm) !important;
+    line-height: var(--tw-leading, var(--text-sm--line-height)) !important;
+    &::placeholder {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+    &::placeholder {
+      color: color-mix(in srgb, #000 60%, transparent) !important;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-black) 60%, transparent) !important;
+      }
+    }
+    &:focus-within {
+      --tw-outline-style: none !important;
+      outline-style: none !important;
+    }
+  }
+  #search-btn {
+    height: calc(var(--spacing) * 10);
+    cursor: pointer;
+    border-radius: var(--radius-md) !important;
+    background-color: var(--color-black);
+    padding-inline: calc(var(--spacing) * 4);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    color: var(--color-white) !important;
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, #000 80%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-black) 80%, transparent);
+        }
+      }
+    }
+  }
