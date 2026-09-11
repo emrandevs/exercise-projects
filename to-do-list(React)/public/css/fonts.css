@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(./../fonts/Vazir.woff);
+}
+@font-face {
+  font-family: "IOS-Font";
+  src: url(./../fonts/Ios-15-Black.ttf);
+}
+@font-face {
+  font-family: "Vazir-Light";
+  src: url(./../fonts/Vazir-Light.woff);
+}
+@font-face {
+  font-family: "Vazir-Medium";
+  src: url(./../fonts/Vazir-Medium.woff);
+}
+@font-face {
+  font-family: "Vazir-Bold";
+  src: url(./../fonts/Vazir-Bold.woff);
+}
+@font-face {
+  font-family: "Ios-15-Semibold";
+  src: url(./../fonts/Ios-15-Semibold.ttf);
+}
+@font-face {
+  font-family: "Ios-15-Regular";
+  src: url(./../fonts/Ios-15-Regular.ttf);
+}
+@font-face {
+  font-family: "Ios-15-Bold";
+  src: url(./../fonts/Ios-15-Bold.ttf);
+}

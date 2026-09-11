@@ -1,0 +1,276 @@
+<!--    <div class="empty-list">
+                <span> چیزی برای نمایش وجود ندارد ! </span>
+                <img
+                  src="./public/images/thinking.png"
+                  alt="Think"
+                  class="size-6"
+                />
+        </div> -->
+
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+
+  </head>
+  <body>
+    <div id="root">
+      <header id="header">
+        <div id="navbar">
+          <a class="nav-item" href="#" class="text-green-600"> خانه </a>
+          <a class="nav-item" href="https://sabzlearn.com"> دوره های سبزلرن </a>
+          <a class="nav-item" href="#"> اشتراک ویژه </a>
+          <a class="nav-item" href="#"> درباره ما </a>
+          <a class="nav-item" href="#"> تماس با ما </a>
+        </div>
+        <div>
+          <a href="https://sabzlearn.ir">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute right-0 left-0 mx-auto md:static h-10 md:h-10 lg:h-10 shrink-0"
+              viewBox="0 0 1020 769"
+            >
+              <polygon
+                fill="#006537"
+                points="484.8124 560.0603 302.0609 655.3444 238.4124 617.2945 238.4124 462.4662 484.8124 560.0603"
+              ></polygon>
+              <polygon
+                fill="#006869"
+                points="972.5712 207.8379 484.6647 462.7753 10.7595 275.1003 498.7369 20.1923 972.5712 207.8379"
+              ></polygon>
+              <line
+                fill="#1a3d3d"
+                x1="929.7475"
+                y1="307.461"
+                x2="929.6513"
+                y2="307.6423"
+              ></line>
+              <polygon
+                fill="#006869"
+                points="1010.2748 576.281 951.4402 632.8758 896.4012 572.396 934.1612 536.0524 934.0697 227.9393 972.5606 207.8255 972.3776 534.6349 1010.2748 576.281"
+              ></polygon>
+              <polygon
+                fill="#00524c"
+                points="972.5669 246.8789 972.5027 335.57 934.0989 357.7689 934.0747 266.9936 972.5669 246.8789"
+              ></polygon>
+              <polygon
+                fill="#004b26"
+                points="478.5395 760.6504 238.4571 617.3325 238.4571 604.062 484.6701 560.0356 489.1606 570.333 478.5395 760.6504"
+              ></polygon>
+              <polygon
+                fill="#00524c"
+                points="585.898 409.8693 484.472 463.0223 10.7549 275.1038 498.7374 20.1923 585.898 409.8693"
+              ></polygon>
+              <polygon
+                fill="#00322d"
+                points="972.5669 207.8394 972.5027 255.9601 934.0989 300.7406 934.0747 227.9542 972.5669 207.8394"
+              ></polygon>
+              <polygon
+                fill="#1eb35b"
+                points="816.6519 386.7124 816.6519 527.0091 478.1841 760.5632 302.0575 655.3487 816.6519 386.7124"
+              ></polygon>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <main class="container pb-25">
+        <!-- Headline -->
+        <div id="headline" class="space-y-3">
+          <h1 class="title">
+            <img src="./public/images/hourglass.png" class="size-8" />
+            <span> مدیریت و برنامه ریزی </span>
+          </h1>
+          <p class="max-w-[750px] text-zinc-700 text-sm font-Vazir-Medium!">
+            سبز تسک ابزاری قدرتمند برای سازماندهی وظایف روزمره، برنامه‌ریزی
+            پروژه‌ها و افزایش بهره‌وری شماست. با رابط کاربری ساده و امکانات
+            پیشرفته، از پیگیری وظایف تا همکاری تیمی را به آسانی مدیریت کنید.
+          </p>
+        </div>
+
+        <!-- Headline Buttons -->
+        <div
+          class="mt-14 border-b w-full border-zinc-200 flex items-center py-3 justify-between"
+        >
+          <div></div>
+          <div class="flex items-center gap-2">
+            <div class="dropdown">
+              <input id="dd-toggle" type="checkbox" hidden />
+
+              <label class="dd-btn" for="dd-toggle">
+                <span>نمایش فقط</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </label>
+
+              <div class="dropdown_menu" role="menu">
+                <div class="dropdown-label">
+                  <p class="text-start text-xs opacity-60">نمایش فقط</p>
+                </div>
+                <div class="py-1">
+                  <label for="dd-toggle" class="menu-item">همه</label>
+                  <label for="dd-toggle" class="menu-item">تکمیل شده ها</label>
+                  <label for="dd-toggle" class="menu-item"
+                    >در انتظار انجام</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <button id="open-dialog" cla>
+              <span> ایجاد جدید </span>
+              <div class="btn-divider"></div>
+              <span>
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <section id="tasks" class="space-y-30 mt-5">
+          <div class="space-y-5">
+            <p class="text-sm">تسک های موجود:</p>
+            <div class="space-y-0.5">
+              <article class="task-card">
+                <div class="task-content">
+                  <div>
+                    <h3>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                    </h3>
+                    <p class="task-desc">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                      و با استفاده از طراحان گرافیک است، چاپگرها و
+                    </p>
+                  </div>
+                </div>
+
+                <div class="moderate">
+                  <!-- Status & Priority -->
+                  <div class="flex items-center **:min-w-max gap-2">
+                    <span class="status-label completed"> تکمیل شده </span>
+                    <span class="priority code-1"> مهم </span>
+                  </div>
+                  <div class="moderate-btns">
+                    <button class="complete-task">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </button>
+                    <button class="undone-btn">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="space-y-5">
+            <p class="text-sm">تسک‌های تکمیل‌شده</p>
+            <div class="space-y-0.5">
+              <!-- done completed -->
+              <article class="task-card done completed">
+                <div class="task-content">
+                  <div>
+                    <h3>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                    </h3>
+                    <p class="task-desc">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                      و با استفاده از طراحان گرافیک است، چاپگرها و
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <!-- Status & Priority -->
+                  <div class="flex items-center **:min-w-max gap-2">
+                    <span class="status-label completed"> تکمیل شده </span>
+                    <span class="priority code-1"> مهم </span>
+                  </div>
+                  <div>
+                    <div class="dropdown group">
+                      <button class="opener">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                      </button>
+
+                      <div class="menu absolute">
+                        <button class="complete">
+                          <i class="fa-solid fa-check-double"></i>
+                          تکمیل شده
+                        </button>
+                        <button class="doing">
+                          <i class="fa-solid fa-spinner"></i> درحال انجام
+                        </button>
+                        <button class="waiting">
+                          <i class="fa-solid fa-info"></i> در انتظار
+                        </button>
+                        <button class="cancel">
+                          <i class="fa-solid fa-circle-stop"></i>متوقف کردن
+                        </button>
+                        <button class="trash">
+                          <i class="fa-solid fa-trash"></i>
+                          حذف کردن
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Create Modal Screen -->
+      <!--  className: is-hidden -->
+      <div id="modal-screen" class="is-hidden">
+        <div class="modal-content">
+          <header class="modal-header">
+            <span
+              class="font-IOS-Font! text-sm absolute left-0 right-0 mx-auto! max-w-max! text-[#2b2929] select-none!"
+            >
+              ایجاد برنامه جدید
+            </span>
+            <div class="btns *:size-3.5 *:cursor-pointer *:rounded-full">
+              <button id="modal-close-button" class=""></button>
+            </div>
+          </header>
+          <main class="my-5 space-y-3">
+            <input
+              placeholder="عنوان تسک را وارد نمائید ..."
+              class="input-element title-input"
+            />
+
+            <textarea
+              class="input-element description-input"
+              placeholder="توضیحات تسک را وارد نمائید ..."
+              name="description"
+            ></textarea>
+            <div class="my-3 flex items-center gap-2">
+              <input id="is-important" type="checkbox" />
+              <label for="is-important"> مهم </label>
+            </div>
+            <div class="info-message">
+              <p class="inline-flex! items-center gap-1">
+                <img
+                  src="./public/images/check.png"
+                  alt="Checked"
+                  class="size-4"
+                />
+                <span> لطفا تمامی فیلد هارا تکمیل بفرمایید </span>
+              </p>
+            </div>
+          </main>
+          <footer class="mt-5 flex items-center justify-end text-sm pb-3">
+            <button id="create-button">ایجاد کنید</button>
+          </footer>
+        </div>
+      </div>
+
+      <footer
+        class="static text-sm text-zinc-600 left-0 right-0 text-center bottom-0"
+      >
+        توسعه داده شده با 💚 در
+        <a href="https://sabzlearn.ir" class="text-green-600">سبزلرن</a>
+      </footer>
+
+      <script src="./src/script.js"></script>
+    </div>
+  </body>
+</html>
