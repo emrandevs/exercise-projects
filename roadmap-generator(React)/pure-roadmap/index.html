@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مسیر سبز - رودمپ یاب</title>
+    <link rel="stylesheet" href="./public/css/utilities.css" />
+    <link rel="stylesheet" href="./public/css/fonts.css" />
+
+    <!-- Modules -->
+    <link rel="stylesheet" href="./public/css/modules/roadmap-styles.css" />
+    <link rel="stylesheet" href="./public/css/modules/background.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="card">
+        <div id="header">
+          <h1 class="title">مسیر سبز - راهنمای مسیر شما</h1>
+        </div>
+        <div id="content">
+          <div>
+            <select id="select-category">
+              <option value="Front-End">فرانت اند</option>
+              <option value="Back-End">بک‌اند</option>
+              <option value="Security">امنیت</option>
+              <option value="Ai">هوش مصنوعی</option>
+            </select>
+          </div>
+          <div>
+            <div class="selected-category-show">
+              <span> نقشه اختصاصی شما برای </span>
+              <span id="selected-roadmap-title"> فرانت‌اند </span>
+              :
+            </div>
+          </div>
+
+          <!-- is-empty className -->
+          <div id="roadmap">
+
+
+            <article class="roadmap-item">
+              <span class="roadmap-step">1</span>
+              <img
+                src="./public/images/javascript.png"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+
+            <article class="roadmap-item">
+              <span class="roadmap-step">2</span>
+              <img
+                src="./public/images/TypeScript.png"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-step">3</span>
+              <img
+                src="./public/images/reactjs.jpg"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-step">4</span>
+              <img
+                src="./public/images/Nextjs.png"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+
+            <article class="roadmap-item">
+              <span class="roadmap-step">5</span>
+              <img
+                src="./public/images/javascript.png"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+            <article class="roadmap-item">
+              <span class="roadmap-step">5</span>
+              <img
+                src="./public/images/javascript.png"
+                class="technology-img"
+                alt=""
+              />
+              <div class="roadmap-content">
+                <h1 class="technology-name">Next.js</h1>
+              </div>
+              <div class="img-overlay"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div id="background"></div>
+    </div>
+  </body>
+</html>

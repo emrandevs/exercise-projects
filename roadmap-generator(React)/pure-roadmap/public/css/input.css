@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Vazir: "Vazir";
+  --font-Vazir-Light: "Vazir-Light";
+  --font-Vazir-Medium: "Vazir-Medium";
+  --font-Vazir-Bold: "Vazir-Bold";
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 457px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+@utility container {
+  @apply mx-auto;
+}
+body {
+  @apply overflow-x-hidden!;
+}
+
+#root {
+  @apply overflow-x-hidden! py-20 min-w-dvw min-h-dvh flex items-center justify-center font-Vazir-Medium! text-white;
+}
+
+#card {
+  @apply size-[50%] p-20 rounded-2xl relative z-20 bg-zinc-900/30 backdrop-blur-sm shadow-2xl/20 border border-white/5;
+}
+
+/* #roadmap.is-empty {
+  @apply block! opacity-90 py-10
+}
+
+.empty-list {
+  @apply flex items-center justify-center grow! min-w-max mx-auto!
+} */
+/* }
+
+#content {
+  @apply mt-20 space-y-10;
+}
+
+#header {
+  @apply flex items-center justify-center;
+}
+
+.title {
+  @apply text-2xl font-Vazir-Bold!;
+}
+
+#select-category {
+  @apply w-full h-10 bg-zinc-900/80 **:bg-[#16161b]! duration-150 focus-within:ring-4 ring-purple-400/20 focus-within:outline-none! border border-zinc-200/10 px-5 rounded-md;
+  border-left: 16px solid transparent;
+}
+
+#selected-roadmap-title {
+  @apply font-Vazir-Bold! text-purple-700!;
+}
+
+.selected-category-show {
+  @apply text-xl! flex items-center justify-center gap-2;
+}
+
+#roadmap {
+  @apply grid grid-cols-2 gap-5;
+}
+
+#roadmap > .roadmap-item {
+  position: relative;
+}
+
+.roadmap-item {
+  @apply h-24 rounded-md duration-300 hover:from-zinc-900 hover:to-zinc-950 overflow-hidden border border-zinc-300/10 bg-gradient-to-t from-zinc-950 to-zinc-900;
+  position: relative;
+}
+
+.roadmap-step {
+  @apply absolute text-7xl font-black! opacity-5 z-10 -top-2 -right-2 after:absolute after:content-["."] select-none;
+}
+
+.technology-img {
+  @apply absolute size-full object-cover opacity-15 bg-blend-darken;
+}
+
+.img-overlay {
+  @apply absolute size-full bg-gradient-to-t from-black/40 to-transparent;
+}
+
+.roadmap-content {
+  @apply z-20 absolute size-full flex items-end p-3   justify-end text-3xl font-sans font-black!;
+}
+
+.technology-name {
+  @apply relative top-0 w-fit h-auto pb-2 justify-center flex bg-gradient-to-r items-center from-white/70 via-white/80 to-white bg-clip-text text-3xl font-extrabold text-transparent text-center select-auto;
+}
+ */
+
+/* #background {
+  @apply fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)];
+} */

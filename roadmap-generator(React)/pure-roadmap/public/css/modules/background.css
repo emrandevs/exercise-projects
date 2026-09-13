@@ -1,0 +1,11 @@
+#background {
+    position: fixed;
+    inset: calc(var(--spacing) * 0);
+    z-index: calc(10 * -1);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 24);
+    background: radial-gradient(125% 125% at 50% 10%,#000 40%,#63e 100%);
+  }
